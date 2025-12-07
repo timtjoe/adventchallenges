@@ -3,7 +3,7 @@
  * @returns {string[]} Colors of matched pairs
  */
 function matchGloves(gloves) {
-  const gloveColors = gloves.reduce((acc, item) => {
+  const colorCounts = gloves.reduce((acc, item) => {
     const color = item.color;
     const hand = item.hand;
 
@@ -15,8 +15,8 @@ function matchGloves(gloves) {
   }, {});
 
   const matchedColors = [];
-  for (const color in gloveColors) {
-    const counts = gloveColors[color];
+  for (const color in colorCounts) {
+    const counts = colorCounts[color];
     const pairsFound = Math.min(counts.L, counts.R);
 
     for (let i = 0; i < pairsFound; i++) {
