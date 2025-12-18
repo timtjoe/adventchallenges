@@ -4,7 +4,6 @@
  * @returns {number[]} The path to the gift
  */
 function findGiftPath(workshop, gift) {
-  // Code here
   // 1. Traverse all properties of the current object level
   for (const [key, value] of Object.entries(workshop)) {
     // Check if the property's VALUE is the gift we are looking for.
